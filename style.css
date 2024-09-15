@@ -1,23 +1,30 @@
-/* Vispārējie stili */
+/* Global styles */
+/* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Header styles */
 header {
-    background-color: #007bff;
+    background-color: #222;
     color: #fff;
-    padding: 15px 0;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 nav {
@@ -29,59 +36,137 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffc107;
 }
 
-main {
-    padding: 20px;
+/* Main container layout */
+.container {
+    display: flex;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 20px auto;
+    padding: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Main content styling */
+main {
+    flex: 3;
+    margin-right: 20px;
 }
 
 main h2 {
+    font-size: 2.5em;
+    color: #007bff;
     margin-top: 0;
 }
 
-img {
+main p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+main img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Sidebar styling */
 aside {
-    background-color: #fff;
-    padding: 15px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+aside h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+aside ul li a:hover {
+    color: #0056b3;
+}
+
+/* Footer styling */
 footer {
-    background-color: #343a40;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
-    color: #fff;
+    color: #ffc107;
     text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    main {
+        margin-right: 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
