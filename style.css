@@ -82,19 +82,22 @@ main h2 {
     font-size: 2.5em;
     color: #007bff;
     margin-top: 0;
+    margin-left: 20cm;
 }
 
 main p {
     font-size: 1.1em;
     margin-bottom: 20px;
     color: #555;
+    margin-left: 15cm;
 }
 
 main img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10cm;
 }
 
 /* Sidebar styling */

@@ -1,0 +1,16 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-container > div{
+    background-color:antiquewhite;
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+    padding: 5%;
+    font-size: 40px;
+    box-shadow: 10px 10px rgb(220, 223, 224);
+}
+div:hover{
+    background-color: aqua;
+}
