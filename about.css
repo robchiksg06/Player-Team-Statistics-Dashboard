@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
 }
-.flex-container > div{
+.flex-container > .box{
     background-color:antiquewhite;
     width: 500px;
     height: 500px;
@@ -11,6 +11,6 @@
     font-size: 40px;
     box-shadow: 10px 10px rgb(220, 223, 224);
 }
-div:hover{
+.box:hover{
     background-color: aqua;
 }
