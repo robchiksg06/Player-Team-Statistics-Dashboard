@@ -6,41 +6,50 @@
     <title>BasketCore</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/myscript.js"></script>
+    <script src="js/myscript.js" defer></script>
 </head>
 <body>
     <header>
         <h1>BasketCore</h1>
-    <div class="dropdown">
-        <span>MENU</span>
-            <div class="drop-content">
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="#">Players</a>
-            <a href="#">Teams</a>
+        <div style="display: flex;">
+
+            <div class="dropdown">
+                <span>MENU</span>
+                <div class="drop-content">
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Players</a>
+                    <a href="#">Teams</a>
+                </div>
+            </div>
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="slider-input">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
         </div>
-    </div>
-    <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-      </label>
+       
     </header>
+
     <main>
         <h2>Basketball?</h2>
-        <p>Yes, here you will be able to view your favorite player's statistics and game schedule. Additionaly you can track they performance throughout the season.</p>
+        <p>Yes, here you will be able to view your favorite player's statistics and game schedule. Additionally, you can track their performance throughout the season.</p>
         <img src="images/basket.jpeg" alt="BasketCore logo">
     </main>
-    <aside>
+
+    <aside id="aside">
         <h3>Saistīti raksti</h3>
         <ul>
-            <li><a href="#">Best baskertball players from 2024 season</a></li>
+            <li><a href="#">Best basketball players from 2024 season</a></li>
             <li><a href="#">NBA seasonal review</a></li>
             <li><a href="#">Latvian basketball stars</a></li>
         </ul>
     </aside>
-    <footer>
-        <p>&copy; 2024, Roberts Mačs</p>
-        <p>
+
+    <footer id="footer">
+        <p class="footer-text">&copy; 2024, Roberts Mačs</p>
+        <p class="footer-link">
             <a href="https://www.instagram.com/r.machs/">Instagram</a>
         </p>
     </footer>
